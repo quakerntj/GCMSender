@@ -1,19 +1,20 @@
+/**
+ * GCMSender Firefox Addon
+ *
+ * Copyright (C) 2015 Quaker Chung
+ * Author: Quaker NTj
+ *      https://github.com/quakerntj/GCMSender
+ *
+ * This work is licensed under the terms of the GNU GPLv2
+**/
+
 var self = require('sdk/self');
-
-// a dummy function, to show how tests work.
-// to see how to test this function, look at test/test-index.js
-function dummy(text, callback) {
-  callback(text);
-}
-
-exports.dummy = dummy;
 
 var Request = require("sdk/request").Request;
 var clipboard = require("sdk/clipboard");
 var { ActionButton } = require("sdk/ui/button/action");
 
 var api_key = "AIzaSyD_e8YpgV0tv8geFIAK7YVCe2WfoBkOkUs";
-//var token = "c43fkloqC0g:APA91bF3gb9kz...";
 var tmp = "key=";
 var key = tmp.concat(api_key);
 
@@ -42,10 +43,7 @@ function sendClipboard(state) {
     url: "https://gcm-http.googleapis.com/gcm/send",
     contentType: "application/json",
     headers: {'Authorization' : key},
-    content: newContent,
-    onComplete: function (response) {
-      console.log(response.text);
-    }
+    content: newContent
   });
 
   message.post();

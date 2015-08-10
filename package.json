@@ -1,22 +1,30 @@
 {
   "title": "GCMSender",
   "name": "gcmsender",
-  "version": "0.2.2",
-  "description": ["Send message to phone by Google Cloud Message HTTP server.\n\n",
-    "You have to install GCMTest (傳訊到手機) from Google Play.  Follow the ",
-    "instruction of the application to get a TOKEN of your phone.  In Firefox, ",
-    "open the preference pages of GCMSender.  Enter TOKEN to the token ",
-    "field.  Then the install is done.\n\n",
-    "The message is means the text from your clipboard.  You can copy any text ",
-    "to clipboard, but not limited to doing in firefox.  Then click the ",
-    "GCMSender button.  The text in your PC's clipboard will be copied to the ",
-    "phone's clipboard. Only the phone have the same TOKEN can receive it.\n\n",
-    "WARNNING!  DO NOT SEND PRIVACY DATA.  This software do not have a server.  ",
-    "All data are send to Google Cloud Message server, then to your phone ",
-    "directlly.  ",
-    "And all transfered message are NOT processed by any ENCRYPTION.  You should ",
-    "take responsible for your own PRIVACY LEAK.  If you not press the GCMSender ",
-    "button, the content in your clipboard will not leak to internet.\n"],
+  "version": "0.2.4",
+  "description": [
+"從電腦的剪貼簿傳送文字訊息到你的Android手機的剪貼簿.\n",
+"Send a message to Android phone by Google Cloud Message HTTP server.\n\n",
+
+"將產生一個按鈕於Firefox右上角.\n",
+"A GCMSender button will appear in the right top of your Firefox.\n\n",
+
+"為了接收從電腦來的訊息, 你得安裝手機端應用: 傳訊到手機. 從手機端取得TOKEN, 輸入此Addon的偏好設定中, 即可完成安裝.\n",
+"For receive message, You have to install GCMTest (傳訊到手機) from Google Play. Follow the instruction of the application to get a TOKEN of your phone. In Firefox, open the preference pages of GCMSender. Enter TOKEN to the token field. Then the install is done.\n\n",
+
+"請於Android下載此應用:\n",
+"Please down load Android application here:\nhttps://play.google.com/store/apps/details?id=com.ntj.GcmTest\n\n",
+
+"你要傳送的訊息, 將從你的剪貼簿中取出, 複製任何文字訊息到剪貼簿, 按下GCMSender的按鈕, 從手機的剪貼簿中, 你將發現這段訊息, 可以貼上任意文字輸入框. 若傳送的是網址, 將立即打開手機上的瀏覽器到該網址去.\n",
+"The message is means the text from your clipboard. You can copy any text to clipboard, but not limited to doing in firefox. Then click the GCMSender button. The text in your PC's clipboard will be copied to the phone's clipboard. Only the phone have the same TOKEN can receive it.\n\n",
+
+"本Addon沒有自己的server, 所有訊息透過Google Cloud Message的server. 訊息僅透過HTTPS的加密傳送, 除非你很信任google, 不然你不應該傳送你的隱私資訊. 此訊息只會在你的手機上出現. 開發者不會得知你的任何資訊.\n",
+"This software does not have a private server. All data are send to Google Cloud Message server, then to your phone directlly. And all transfered message are only processed by HTTPS ENCRYPTION. You should take responsible for your own PRIVACY LEAK. If you do not press the GCMSender button, the content in your clipboard will not leak to internet.\n\n",
+
+"本Addon與Android Application皆為open source. 如有興趣, 你可以到我的github裡看看.\n",
+"GCMSender Addon and the Receiver Android application are all open source.  You can check it in my github.\n",
+"https://github.com/quakerntj/GCMSender\n",
+"https://github.com/quakerntj/SendMesageToPhoneByGCM\n"],
   "main": "index.js",
   "author": "QuakerNTj",
   "engines": {
@@ -27,7 +35,7 @@
     "title": "Token of GCM",
     "description": "Copy your TOKEN from GCMTest (傳訊到手機) here.",
     "type": "string",
-    "value": "For example, d94fkloqjbgv:APA91df2easxcbv23423..."
+    "value": "For example, d94fkloqjbgv:APAeasxcbv234291df23..."
   }],
-  "license" : "MIT"
+  "license" : "GPLv2"
 }
